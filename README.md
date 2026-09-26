@@ -65,6 +65,24 @@ codex mcp login hooklistener --scopes full_access   # or read_only
 
 Customize → Connectors → **+** → Add custom connector → paste `https://app.hooklistener.com/api/mcp` → Add → Connect. [Full guide](https://www.hooklistener.com/mcp/claude)
 
+### Cline
+
+Cline documents bearer-token headers for remote servers, so use a Hooklistener API key (paid plans, created at [Organization Settings → API Keys](https://app.hooklistener.com/organization/settings/api-keys)). In `cline_mcp_settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "hooklistener": {
+      "type": "streamableHttp",
+      "url": "https://app.hooklistener.com/api/mcp",
+      "headers": { "Authorization": "Bearer hklst_your_api_key" }
+    }
+  }
+}
+```
+
+Agents installing the server for you can follow [llms-install.md](llms-install.md).
+
 ### Other clients
 
 Step-by-step guides: [ChatGPT](https://www.hooklistener.com/mcp/chatgpt) · [Gemini CLI](https://www.hooklistener.com/mcp/gemini-cli) · [Windsurf](https://www.hooklistener.com/mcp/windsurf) · [Zed](https://www.hooklistener.com/mcp/zed) · [OpenCode](https://www.hooklistener.com/mcp/opencode) · [Grok (xAI API)](https://www.hooklistener.com/mcp/grok)
