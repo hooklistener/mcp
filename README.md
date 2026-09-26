@@ -7,7 +7,7 @@ Hosted MCP server that lets AI coding agents test webhooks end to end: create a 
 - **Endpoint:** `https://app.hooklistener.com/api/mcp`
 - **Transport:** Streamable HTTP. Nothing to install or run locally.
 - **Auth:** OAuth 2.1 with PKCE and dynamic client registration. Clients request `full_access` or `read_only`. A Hooklistener API key (`hklst_…`) also works as a Bearer token for clients without OAuth.
-- **Tools:** 69, across 11 categories.
+- **Tools:** 67, in 7 toolsets. A new workspace lists 26 of them (every webhook tool plus the tool that starts each other product); a toolset appears once you use that product. Send `x-hooklistener-toolsets: all` to list everything.
 - **Plans:** works on every plan, including Free.
 
 This repository holds the setup instructions and the [MCP Registry](https://registry.modelcontextprotocol.io) entry (`server.json`). The server itself is operated by Hooklistener.
@@ -76,8 +76,8 @@ Any MCP client that supports Streamable HTTP can connect with the endpoint above
 | Category | Examples |
 | --- | --- |
 | Debug endpoints | `create_endpoint`, `get_endpoint`, `list_endpoint_anomalies`, `set_endpoint_alerts` |
-| Captured requests | `wait_for_request`, `search_requests`, `get_request`, `diagnose_request`, `investigate_request_retries` |
-| Verify, compare and replay | `verify_request_signature` (Stripe, GitHub, Slack), `validate_request` (JSON Schema), `diff_requests`, `replay_request` (edit the body and re-sign) |
+| Captured requests | `wait_for_request`, `list_requests` (list or search), `get_request`, `diagnose_request`, `investigate_request_retries` |
+| Verify, compare and replay | `verify_request_signature` (Stripe, GitHub, Slack), `validate_request` (JSON Schema), `diff_requests`, `replay_request` (replay or forward, edit the body and re-sign) |
 | Mock responses | `create_response_rule`, `test_response_rules` |
 | Request threads | `set_thread_rule`, `list_request_threads` |
 | Replay cases and suites | `save_request_case`, `run_endpoint_cases`, `wait_for_case_run` |
