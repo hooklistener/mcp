@@ -3,8 +3,12 @@
   "name": "com.hooklistener/mcp",
   "title": "Hooklistener",
   "description": "Webhook, email, WebSocket and tunnel testing for AI agents: capture, wait, verify, replay.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://www.hooklistener.com/mcp",
+  "repository": {
+    "url": "https://github.com/hooklistener/mcp",
+    "source": "github"
+  },
   "remotes": [
     {
       "type": "streamable-http",
