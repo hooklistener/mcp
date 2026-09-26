@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.hooklistener/mcp",
+  "title": "Hooklistener",
+  "description": "Webhook, email, WebSocket and tunnel testing for AI agents: capture, wait, verify, replay.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.hooklistener.com/mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://app.hooklistener.com/api/mcp"
+    }
+  ]
+}
